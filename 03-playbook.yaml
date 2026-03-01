@@ -1,0 +1,9 @@
+- name: Nginx installation
+  hosts: web
+  become: yes # Used to get sudo access
+  tasks:
+  - name: installing Nginx
+    ansible.builtin.package: # Used to install packages like nginx
+      name: nginx
+      state: present # should provide state as present to install a package
+  
