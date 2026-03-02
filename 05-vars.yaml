@@ -1,11 +1,13 @@
-- name: play level variables
+- name: task level variables
   hosts: local
   connection: local
-  vars: # play level variable & can be override at task
+  vars: # play level variable & can be override at task level
     COURSE: "DevOps with AWS"
     DURATION: "140hrs"
     TRAINER: "Sivakumar Reddy"
   tasks:
   - name: print variables
+    vars: # task level variable & priority goes to task level variable 1st if no varible at task level the checks for play level variable
+      COURSE: "Ansible" 
     ansible.builtin.debug:
       msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Trainer is {{ TRAINER }}"
