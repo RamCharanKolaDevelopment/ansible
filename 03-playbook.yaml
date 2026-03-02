@@ -6,4 +6,9 @@
     ansible.builtin.package: # Used to install packages like nginx
       name: nginx
       state: present # should provide state as present to install a package
+  - name: start nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
   
