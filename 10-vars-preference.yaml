@@ -5,10 +5,10 @@
     NAME: "Variable from Play"
   # vars_files:
   # - course.yaml
-  vars_prompt:
-  - name: NAME
-    prompt: Please enter name
-    private: false
+  # vars_prompt:
+  # - name: NAME
+  #   prompt: Please enter name
+  #   private: false
   tasks:
   - name: print variables preference/preceedence
     # vars:
@@ -19,3 +19,4 @@
 # 1. Args
 # 2. Tasks
 # 3. File
+# 4. Prompt
