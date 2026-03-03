@@ -1,0 +1,17 @@
+- name: gathering facts
+  hosts: local
+  connection: local
+  tasks:
+  - name: print facts
+    ansible.builtin.debug:
+      msg: "{{ ansible_facts }}"
+
+  - name: checking RedHat or not
+    ansible.builtin.debug:
+      msg: "Yes, package manager is Ansible"
+    when: ansible_facts.os_family == "RedHat"
+
+  - name: checking Debian or not
+    ansible.builtin.debug:
+      msg: "Yes, package manager is Debian"
+    when: ansible_facts.os_family == "Debian"
