@@ -1,0 +1,23 @@
+- name: data types
+  hosts: local
+  connection: local
+  vars:
+    PROGRAM: "DevSecOps with AWS" # string type
+    DURATION: 140 # int/number type
+    IS_LIVE: true # bool type
+    DETAILS: # map/dictionary, output will comes inside { }
+      MONTHS: 4
+      TRAINER: "Sivakumar Reddy"
+    TOPICS: # list denoted with - or []
+    - Linux
+    - Shell
+    - Ansible
+  tasks:
+  - name: print data type variables
+    ansible.builtin.debug:
+      msg: | # this | is used to write multi-line print statements in Ansible
+        Program: {{ PROGRAM }}
+        Duration: {{ DURATION }}
+        Is Live: {{ IS_LIVE }}
+        Details: {{ DETAILS }}
+        Topics: {{ TOPICS }}
