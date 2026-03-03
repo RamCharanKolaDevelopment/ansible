@@ -11,7 +11,10 @@
     private: false
   tasks:
   - name: print variables preference/preceedence
-    vars:
-      NAME: "Variable from Tasks"
+    # vars:
+    #   NAME: "Variable from Tasks"
     ansible.builtin.debug:
       msg: "Hi {{ NAME }}"
+
+# 1. Args
+# 2. Tasks
