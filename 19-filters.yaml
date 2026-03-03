@@ -36,4 +36,4 @@
 
   - name: list to map filter
     ansible.builtin.debug:
-      msg: "{{ tagsMap | items2dict }}"
+      msg: "{{ agsLis | items2dict }}"
