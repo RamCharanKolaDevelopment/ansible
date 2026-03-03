@@ -18,4 +18,4 @@
 
   - name: map to list filter
     ansible.builtin.debug:
-      msg: "listMap {{ listMap | dict2items }}"
+      msg: "tagsMap {{ tagsMap | dict2items }}"
