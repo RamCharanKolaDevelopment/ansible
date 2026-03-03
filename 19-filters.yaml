@@ -1,7 +1,13 @@
 - name: filters demo
   hosts: local
   connection: local
+  vars:
+    topics: linux, ansible, shell, terraform
   tasks:
   - name: filters
     ansible.builtin.debug:
       msg: "Hi Ram Charan {{ greetings | default('Good morning')}}"
+  
+  - name: split filter & printing output
+    ansible.builtin.debug:
+      msg: "topics {{ topics | split(', ') }}"
