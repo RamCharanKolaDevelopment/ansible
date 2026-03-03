@@ -1,8 +1,8 @@
 - name: variables preference/preceedence
   hosts: local
   connection: local
-  vars:
-    NAME: "Variable from Play"
+  # vars:
+  #   NAME: "Variable from Play"
   # vars_files:
   # - course.yaml
   # vars_prompt:
@@ -20,3 +20,4 @@
 # 2. Tasks
 # 3. File
 # 4. Prompt
+# 5. Play
