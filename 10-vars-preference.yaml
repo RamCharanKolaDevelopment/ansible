@@ -1,4 +1,4 @@
-- name: variables preference/preceedence
+- name: variables preference
   hosts: local
   connection: local
   vars:
@@ -10,7 +10,7 @@
     prompt: Please enter name
     private: false
   tasks:
-  - name: print variables preference/preceedence
+  - name: print variables preference
     vars:
       NAME: "Variable from Tasks"
     ansible.builtin.debug:
