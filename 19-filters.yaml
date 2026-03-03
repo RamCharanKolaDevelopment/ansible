@@ -36,4 +36,12 @@
 
   - name: list to map filter
     ansible.builtin.debug:
-      msg: "{{ agsLis | items2dict }}"
+      msg: "{{ tagsLis | items2dict }}"
+  
+  - name: read students course.yaml
+    ansible.builtin.set_fact: # setting the variable
+      student_yaml: "{{ lookup('file', 'students.yaml') | from_yaml }}"
+  
+  - name: convert YAML to JSON
+    ansible.builtin.debug:
+      msg: "{{ students.yaml | to_nice_json }}"
