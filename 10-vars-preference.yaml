@@ -3,8 +3,8 @@
   connection: local
   vars:
     NAME: "Variable from Play"
-  vars_files:
-  - course.yaml
+  # vars_files:
+  # - course.yaml
   vars_prompt:
   - name: NAME
     prompt: Please enter name
@@ -18,3 +18,4 @@
 
 # 1. Args
 # 2. Tasks
+# 3. File
