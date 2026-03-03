@@ -7,6 +7,20 @@
       name: ansible
       project: roboshop
       component: catalogue
+    tagsList: [
+        {
+            "key": "name",
+            "value": "ansible"
+        },
+        {
+            "key": "project",
+            "value": "roboshop"
+        },
+        {
+            "key": "component",
+            "value": "catalogue"
+        }
+    ]
   tasks:
   - name: filters
     ansible.builtin.debug:
@@ -14,8 +28,12 @@
   
   - name: split filter & printing output
     ansible.builtin.debug:
-      msg: "topics {{ topics | split(', ') }}"
+      msg: "{{ topics | split(', ') }}"
 
   - name: map to list filter
     ansible.builtin.debug:
-      msg: "tagsMap {{ tagsMap | dict2items }}"
+      msg: "{{ tagsMap | dict2items }}"
+
+  - name: list to map filter
+    ansible.builtin.debug:
+      msg: "{{ tagsMap | items2dict }}"
