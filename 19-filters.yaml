@@ -3,6 +3,10 @@
   connection: local
   vars:
     topics: linux, ansible, shell, terraform
+    tagsMap:
+      name: ansible
+      project: roboshop
+      component: catalogue
   tasks:
   - name: filters
     ansible.builtin.debug:
@@ -11,3 +15,7 @@
   - name: split filter & printing output
     ansible.builtin.debug:
       msg: "topics {{ topics | split(', ') }}"
+
+  - name: map to list filter
+    ansible.builtin.debug:
+      msg: "listMap {{ listMap | dict2items }}"
