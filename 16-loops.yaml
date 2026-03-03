@@ -5,7 +5,7 @@
   - name: printing looped elements
     ansible.builtin.debug:
       msg: "Hi {{ item }}" # item is a reserved keyword to get loop element
-    loop:
+    loop: # loop is list type
     - Ramesh
     - Suresh
     - Naresh
